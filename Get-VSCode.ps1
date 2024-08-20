@@ -1,4 +1,3 @@
-# $rootDir="C:\Utveckling\PowerShell\Update-AG-VSCODE"
 [String] $ScriptFullPath = $MyInvocation.MyCommand.Source
 [String] $ScriptName = $MyInvocation.MyCommand
 $rootDir = $ScriptFullPath.Remove(($ScriptFullPath).IndexOf($ScriptName),($ScriptName).Length)

@@ -70,7 +70,6 @@ function New-VSCodePortable() {
     param(
         $ReleaseDir
     )
-    # $ReleaseDir = "C:\Utveckling\PowerShell\Update-AG-VSCODE\RELEASE\2024-06-04\VSCODE\1.89.1\"
     foreach($item in (Get-ChildItem -Path $ReleaseDir)) {
         if($item.Mode -ne "d-----"){
             if($item.Name -like "*.zip" -and $item.Name -notlike "*server*") {
@@ -250,6 +249,7 @@ function New-VSCodeExtensions() {
                 }
             }    
         }
+        # TODO Need to sort out what to do when option 3 is chosen
         $dirNameFromArchiveName = $archive.Remove($archive.LastIndexOf("."),4)
         $DestinationPath = ""
         $DestinationPath = $ReleaseDir+$dirNameFromArchiveName
