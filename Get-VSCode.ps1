@@ -101,6 +101,7 @@ switch($answer)
             New-VSCodePortable  -ReleaseDir $relDir 6>> $rootDir\LogFile.txt
 
             New-VSCodeServer -ReleaseDir $relDir
+            $vsCodeExtensionPath = $env:USERPROFILE + "\.vscode\extensions"
             New-VSCodeExtensions -VSCodeExtension $vsCodeExtensionPath -ReleaseDir $relDir
             Remove-Module Get-VSCodeAG
         }
